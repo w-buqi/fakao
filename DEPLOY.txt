@@ -1,0 +1,26 @@
+把「法考刷题」放到网上（10 分钟，免费，自动 HTTPS）
+
+为什么必须放到网上：
+手机要把它装成 App（离线可用），必须是 https 地址。
+直接把文件发给对方、用微信打开文件，是装不上的。
+
+方法 A：Netlify Drop（最简单，无需命令行）
+1. 打开 https://app.netlify.com/drop
+2. 把压缩包解压后的整个文件夹拖进去
+3. 等 10 秒，得到类似 https://xxx-yyy.netlify.app 的地址
+4. 把这个地址发到微信即可
+（免费额度：每月 100GB 流量，个人用完全够；注册后可改名、长期保留）
+
+方法 B：Cloudflare Pages / Vercel
+登录后在控制台选「上传静态文件 / Upload assets」，把同一个文件夹传上去。
+两者都免费、都自动 HTTPS，国内访问 Cloudflare Pages 一般比 Netlify 稳一些。
+
+方法 C：GitHub Pages
+把文件推到仓库，Settings → Pages → 选分支根目录。
+
+注意：
+- 传的是 index.html / app.js / styles.css / sw.js / manifest.webmanifest / icons/ 这一级，
+  不要再套一层文件夹（否则首页 404）。
+- 文件里没有后端、没有账号，传上去也不会泄露任何数据；
+  每个人的做题记录都存在自己手机的浏览器里。
+- 更新版本时重新上传覆盖即可，地址不变，用户数据不受影响。
