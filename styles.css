@@ -684,3 +684,24 @@ input[type="range"] {
   flex: 1;
   margin: 0;
 }
+
+/* 粘贴导入 */
+.paste-box {
+  width: 100%;
+  min-height: 240px;
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  -webkit-appearance: none;
+}
+.paste-box:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
